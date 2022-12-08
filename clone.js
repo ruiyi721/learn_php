@@ -27,5 +27,17 @@ obj2 = {
     }
 };
 
+let x = 100;
+let y = x;
+x = 200;
+
 console.log(obj1);
 console.log(obj2);
+console.log(y);
+
+let c = {
+    x: 100
+}
+let d = c;
+d.x = 200;
+console.log(c);
