@@ -1,14 +1,21 @@
 <?php
-    $s = "123456789";
+    $s = "0123456789";
     //     ^
-    $test = strpos($s, "12"); // 從 $s 裡面找到 '23' 在哪個位置，回傳 idx
-    // echo gettype($test); // 如果找不到會是false
-    // echo $test; // 2
-    if ($test) {
-        echo "yes";
-    } else {
-        echo "no";
+    // $test = strpos($s, "12"); // 從 $s 裡面找到 '23' 在哪個位置，回傳 idx
+    // // echo gettype($test); // 如果找不到會是false
+    // // echo $test; // 2
+    // if ($test === false) { // =(賦值) ==(比較) ===(型別也要一樣)
+    //     echo "not found";
+    // } else {
+    //     echo "found";
+    // }
+
+    function myStrpos($where, $findWhat) {
+        $test = strpos($where, $findWhat);
+        return ($test === false) ? -1 : $test;
     }
+
+    echo myStrpos($s, '3');
 
     // $n = 4;
     // $formal = "零壹貳參肆伍";
